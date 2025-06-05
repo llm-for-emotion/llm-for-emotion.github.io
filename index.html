@@ -25,7 +25,7 @@
   <!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
 
 
-  <title>Academic Project Page</title>
+  <title>CuLEmo paper</title>
   <link rel="icon" type="image/x-icon" href="static/images/favicon.ico">
   <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
 
@@ -116,22 +116,22 @@
                 <a href="https://tadesse-destaw.github.io/" target="_blank">Tadesse Destaw Belay</a>,
               </span>
               <span class="author-block">
-                <a href="https://nedjmaou.github.io/" target="_blank">Ahmed Haj Ahmed</a>,
+                <a href="https://github.com/AhmedHajAhmed" target="_blank">Ahmed Haj Ahmed</a>,
               </span>
               <span class="author-block">
                 <a href="https://abumafrim.github.io/" target="_blank">Alvin Grissom II</a>,
               </span>
               <span class="author-block">
-                <a href="https://jpwahle.com/" target="_blank">Iqra Ameer</a>,
+                <a href="https://www.abington.psu.edu/person/iqra-ameer-phd" target="_blank">Iqra Ameer</a>,
               </span>
               <span class="author-block">
-                <a href="https://terryruas.com/" target="_blank">Grigori Sidorov</a>,
+                <a href="https://www.cic.ipn.mx/~sidorov/" target="_blank">Grigori Sidorov</a>,
               </span>
               <span class="author-block">
-                <a href="https://belomeriem.github.io/" target="_blank">Olga Kolesnikova</a>,
+                <a href="https://www.cic.ipn.mx/index.php/olga-kolesnikova" target="_blank">Olga Kolesnikova</a>,
               </span>
               <span class="author-block">
-                <a href="https://christinedekock.com/" target="_blank">Seid Muhie Yimam</a>
+                <a href="https://seyyaw.github.io/" target="_blank">Seid Muhie Yimam</a>
 
             </div>
 
@@ -260,43 +260,27 @@
         <div class="column is-four-fifths">
           <h3 class="title is-3">TL;DR</h3>
           <div class="content has-text-justified">
-            <!--<p>
-                  People worldwide use language in subtle and complex ways to express emotions. While emotion recognition -- an umbrella term for several NLP tasks -- significantly impacts different applications in NLP and other fields, most work in the area is focused on high-resource languages. Therefore, this has led to major disparities in research and proposed solutions, especially for low-resource languages that suffer from the lack of high-quality datasets.
-                  In this paper, we present \datasetname~-- a collection of multilabeled emotion-annotated datasets in 28 different languages. \datasetname~covers predominantly low-resource languages from Africa, Asia, Eastern Europe, and Latin America, with instances from various domains annotated by fluent speakers. We describe the data collection and annotation processes and the challenges of building these datasets. Then, we report different experimental results for monolingual and crosslingual multi-label emotion identification, as well as intensity-level emotion recognition. We investigate results with and without using LLMs and analyse the large variability in performance across languages and text domains. We show that \datasetname~datasets are a step towards bridging the gap in text-based emotion recognition and discuss their impact and utility.
-                </p> -->
-            <p>We introduce <strong><i>BRIGHTER</i></strong>: a new emotion
-              recognition dataset collection in 28 languages that originate from 7 distinct language families. Many of these languages are considered low-resource, and are mainly spoken in regions characterised by a limited availability of NLP resources (e.g., Africa, Asia, Latin America).</p>
-            
-            <p>Our contribuitions:</p>
+
+            <p> We introduce Cultural Lenses on Emotion (<strong><i>CuLEmo</i></strong>), the first benchmark designed to evaluate culture-aware emotion prediction across six languages: 
+              Amharic, Arabic, English, German, Hindi, and Spanish. CuLEmo comprises 400 crafted questions per language, each requiring nuanced cultural reasoning and understanding.            
+            <p>This work will answer the fowlling research questions (RQs):</p>
             <ul>
-              <li><strong>A linguistically diverse multilingual dataset</strong>:
-                <i>BRIGHTER</i> consists of nearly 100k emotion-annotated instances in 28 languages, predominantly
-                from
-                Africa, Asia, Eastern Europe, and Latin America. The dataset spans 7 language families and covers a
-                variety
-                of
-                domains, including social media, speeches, news, literature, and reviews. Each instance is multi-labeled
-                with six
-                emotion classes — <strong>joy, sadness, anger, fear, surprise, disgust</strong>, and <strong>neutral</strong>
-                —
-                and
-                annotated within four emotion intensity levels, ranging from 0 to 3.
+              <li><strong>RQ1</strong>: Do LLMs provide culturally aware emotional responses?
               </li>
               <li>
-                <strong>Baseline Evaluation</strong>: We provide an initial set of monolingual and crosslingual
-                experiments, benchmarking Large Language Models
-                (LLMs) for
-                multi-label emotion identification and intensity prediction. Our results highlight the performance
-                disparities across
-                languages, showing that LLMs struggle with perceived emotions in text, especially for low-resource
-                languages, and
-                often perform better when prompted in English.
+                <strong>RQ2</strong>: Which cultures are more effectively represented in LLMs?
+              </li>
+                <li>
+                <strong>RQ3</strong>: Can LLMs identify a country’s culture based on the text describing an event in the prompt?
+              </li>
+                <li>
+                <strong>RQ4</strong>: Does the language of the prompt affect the ability of LLMs for culture-aware emotion understanding?
               </li>
             </ul>
           </div>
   
-          <h3 class="title is-3">Statistics</h3>
-          <p>Below are the statistics the emotion distribution:</p>
+          <h3 class="title is-3">CuLEmo Statistics</h3>
+          <p>Below are the statistics of the emotion distribution across the six categories: joy, fear, sadness, anger, guilt, and neutral (no specific emotion).:</p>
           <img 
             src="static/images/stat.png" 
             alt="MY ALT TEXT"
@@ -314,7 +298,7 @@
           </div>
           </div>
 
-            <p><strong>Performance of different LLMs across three prompt paraphrases on the English test set.</strong> Different prompts impact model performance.</p>
+            <p><strong>Performance of different LLMs for Emotion prediction in English and in-language prompts.</strong> </p>
             <img src="static/images/result.png" width="1277px" alt="MY ALT TEXT" />
             <div class="content has-text-justified">
             <div class="overlay" id="overlay">
@@ -342,18 +326,14 @@
   
             <img src="static/images/bell.png" alt="MY ALT TEXT" width="744px"/>
             
-            <p class="subtitle has-text-centered">
-              Pearson correlation scores for intensity classification using MLMs and LLMs. <br> The best performance scores are highlighted in  orange.
-            </p>
+            <p class="subtitle has-text-centered"> Sentiment (positive, negative, and neutral) distribution across countries in the CuLEmo dataset.            </p>
              
           </div>
           <div class="item has-text-centered">
   
-            <img src="static/images/bell.png" alt="MY ALT TEXT" width="744px"/>
+            <img src="static/images/table.png" alt="MY ALT TEXT" width="744px"/>
             
-            <p class="subtitle has-text-centered">
-              Pearson correlation scores for intensity classification using MLMs and LLMs. <br> The best performance scores are highlighted in  orange.
-            </p>
+            <p class="subtitle has-text-centered"> LLMs’ accuracy for the emotion prediction task. Columns labeled EN/AR/DE/AM/HI/ES show the prompt language for each corresponding culture. The highest-scoring model is highlighted in <strong>bold</strong>strong>, and the best model for the in-language prompt is <u>underlined</u>u> . </p>
              
           </div>
         </div>
